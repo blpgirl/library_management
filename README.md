@@ -159,49 +159,49 @@ Tasks:
 2. Choose a monolithic architecture with api only backend and frontend separate. Use best coding practices for it.
 3. Develop the code in Ruby on Rails for backend and React for front end with the tests to run in Rspec for all the functionalities on the requirements. Include a README with setup instructions and any other documentation you deem necessary. Also, the application should have seeded data / credentials for demo purposes. Make sure to stick to the principles below. Make the application with a minimalist but modern design with nice css presentation and user friendly. Create the dashboards really visual so it´s easy to read all the data but try to keep it with standard libraries like bootstrap or something that is visually beautiful and also has lots of support and documentation and lets you interact with it.
    
-Requirements:
-Backend
-	● Authentication and Authorization:
-		○ Users should be able to register, log in, and log out.
-		○ Two types of users: Librarian and Member.
-		○ Only Librarian users should be able to add, edit, or delete books.
+#### Requirements:
+* **Backend**
+	* Authentication and Authorization:
+		* Users should be able to register, log in, and log out.
+		* Two types of users: Librarian and Member.
+		* Only Librarian users should be able to add, edit, or delete books.
 		
-	● Book Management:
-		○ Ability to add a new book with details like title, author, genre, ISBN, and total
+	* Book Management:
+		* Ability to add a new book with details like title, author, genre, ISBN, and total
 		copies.
-		○ Ability to edit and delete book details.
-		○ Search functionality:
-			■ Users should be able to search for a book by title, author, or genre.
+		* Ability to edit and delete book details.
+		* Search functionality:
+			* Users should be able to search for a book by title, author, or genre.
 
-	● Borrowing and Returning:
-		○ Member users should be able to borrow a book if it's available. They can't borrow
+	* Borrowing and Returning:
+		* Member users should be able to borrow a book if it's available. They can't borrow
 		the same book multiple times.
-		○ The system should track when a book was borrowed and when it's due (2
+		* The system should track when a book was borrowed and when it's due (2
 		weeks from the borrowing date).
-		○ Librarian users can mark a book as returned.
+		* Librarian users can mark a book as returned.
 		
-	● Dashboard:		
-		○ Librarian:
-			■ A dashboard showing total books, total borrowed books, books due today,
+	* Dashboard:		
+		* Librarian:
+			* A dashboard showing total books, total borrowed books, books due today,
 			and a list of members with overdue books.
-		○ Member:
-			■ A dashboard showing books they've borrowed, their due dates, and any
+		* Member:
+			* A dashboard showing books they've borrowed, their due dates, and any
 			overdue books.
 
-● API Endpoints:
-	○ Develop a RESTful API that allows CRUD operations for books and borrowings.
-	○ Ensure proper status codes and responses for each endpoint.
-	○ Testing should be done with RSPEC.
-	○ Spec files should be included for all the requirements above.
+* **API Endpoints:**
+	* Develop a RESTful API that allows CRUD operations for books and borrowings.
+	* Ensure proper status codes and responses for each endpoint.
+	* Testing should be done with RSPEC.
+	* Spec files should be included for all the requirements above.
 
 Principles: 
-● Clean Architecture: Your architecture should adhere to Clean Architecture principles,
+* Clean Architecture: Your architecture should adhere to Clean Architecture principles,
 including separation of concerns and independence of components.
-● Application testing: Your project should have sufficient test coverage. Use of TDD is
+* Application testing: Your project should have sufficient test coverage. Use of TDD is
 preferable.
-● Code quality: Your code should be well-organized, readable, and adhere to best
+* Code quality: Your code should be well-organized, readable, and adhere to best
 practices.
-● Functionality: Your application should perform as expected in the requirements without
+* Functionality: Your application should perform as expected in the requirements without
 errors or bugs. Optional but desired: no warnings in the browser console.
 
 -----------------------------------
