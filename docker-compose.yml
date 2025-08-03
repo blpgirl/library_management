@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mariadb:10.8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: library
+      MYSQL_USER: rails
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173" # or "3001:3000" depending on your React dev server
+    volumes:
+      - ./frontend:/app
+    working_dir: /app
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true # for hot reload in Docker
+
+volumes:
+  db_data:
